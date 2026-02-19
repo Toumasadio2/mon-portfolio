@@ -47,7 +47,8 @@ export default function Portfolio() {
       school: 'Projet Autonome',
       description: 'Développement d\'une plateforme ERP modulaire dédiée aux PME, permettant la gestion intégrée des ressources (RH, stocks, finances, CRM). Architecture cloud-native avec authentification sécurisée et tableaux de bord décisionnels.',
       skills: ['React', 'Node.js', 'PostgreSQL', 'Architecture ERP', 'Gestion de projet', 'Sécurité applicative'],
-      icon: Code2
+      icon: Code2,
+      projectUrl: 'https://abservicecom.com/'
     },
     {
       title: 'Optimisation d\'un Système d\'Information',
@@ -348,13 +349,25 @@ export default function Portfolio() {
                   
                   <p className="text-slate-300 mb-4">{project.description}</p>
                   
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.skills.map((skill, sidx) => (
                       <span key={sidx} className="px-3 py-1 text-xs rounded-full bg-slate-800 text-cyan-400 border border-slate-700">
                         {skill}
                       </span>
                     ))}
                   </div>
+
+                  {project.projectUrl && (
+                    <a 
+                      href={project.projectUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors border border-cyan-500/30"
+                    >
+                      <ExternalLink size={16} />
+                      Voir le projet
+                    </a>
+                  )}
                 </div>
               );
             })}
