@@ -193,7 +193,7 @@ export default function Portfolio() {
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-400 mb-4">
-            Analyste SOC Junior | Cybersécurité & Infrastructure
+            Ingénieur Système | Cybersécurité & Infrastructure
           </p>
           
           <p className="text-lg text-slate-500 max-w-2xl mx-auto mb-12">
